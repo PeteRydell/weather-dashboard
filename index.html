@@ -10,7 +10,7 @@
 </head>
 
 <div class="page-header" style="background-color: #343a40; color: white; text-align: center">
-  <h1 style="padding: 30px;">Weather Dashboard</h1>
+  <h1 style="padding: 20px;">Weather Dashboard</h1>
 </div>
 
 <body>
@@ -20,15 +20,16 @@
                 <h3>Search for a City:</h3>
                 <nav class="navbar navbar-light bg-light">
                     <form class="form-inline">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="city-input">
+                        <button class="btn btn-primary" type="submit" id="find-city"><i class="fa fa-search"></i></button>
+                        <div id="city-list"></div>
                     </form>
                 </nav>
             </div>
             <div class="col-lg-9">
                 <row>
                     <div class="card">
-                        <div class="card-body" id="city">
+                        <div class="card-body" id="city-weather">
 
                         </div>
                     </div>
@@ -41,5 +42,9 @@
             </div>
         </row>
     </container>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

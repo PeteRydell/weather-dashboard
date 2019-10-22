@@ -1,11 +1,15 @@
 .page-header{
-    height: 50px;
+    height: 30px;
 }
 
 #search{
     float: left;
 }
 
-#city{
-    float: right;
+#city-weather{
+    background: white;
+}
+
+.city{
+    background: #F8F9FA;
 }

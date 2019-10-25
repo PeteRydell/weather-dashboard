@@ -1,4 +1,4 @@
-//var cityList = document.getElementById("#city-list");
+
 
 var cities = [];
 
@@ -23,11 +23,22 @@ function renderCitySearch() {
     $("#city-list").empty();
 
     for (var i = 0; i < cities.length; i++) {
-        var cityP = ("<p>");
-        cityP.attr("data-name", movies[i]);
-        cityP.text(cities[i]);
-        $("#city-list").append(cityP);
+        var cityBtn = ("<p>");
+        cityBtn.addClass("city")
+        cityBtn.attr("data-name", cities[i]);
+        cityBtn.text(cities[i]);
+        $("#city-list").append(cityBtn);
+      }
+  }
 
-    }
-}
+  $('#find-city').on('click', function(event) {
+    event.preventDefault();
+    var city = $('#city-list').val().trim();
+    cities.push(city);
+    renderCitySearch();
+  });
 
+  renderCitySearch();
+
+
+//var iconurl="http://openweathermap.org/img/wn/" + iconcode + ".png";

@@ -3,6 +3,9 @@ var cities = [];
 $("#find-city").on("click", function(event) {
     event.preventDefault();
 
+function displayCityInfo(){
+  
+}
     var cityIn = $("#city-input").val();
     console.log(cityIn)
     var location = $(this).attr("data-name");
@@ -12,7 +15,7 @@ $("#find-city").on("click", function(event) {
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-
+        event.preventDefault();
           var cityDiv = $("<div id='city-weather'>");
 
           // Storing the city name
@@ -60,15 +63,22 @@ $("#find-city").on("click", function(event) {
 function renderCitySearch() {
 
   $("#city-list").empty();
+  for (var i = 0; i < cities.length; i++){
+    var a = $("<p>");
+    a.addClass("city-searched");
+    a.attr("data-name", cities[i]);
+    a.text(cities[i]);
+    $("#city-list").append(a);
+  }
 
-  $('#find-city').on('click', function(event) {
+  $('#add-city').on('click', function(event) {
     event.preventDefault();
     var city = $('#city-list').val().trim();
     cities.push(city);
     renderCitySearch();
   });
 
-  renderCitySearch();
+  $(document).on("click", ".city-searched", displayMovieInfo);
 }
 
 //var iconurl="http://openweathermap.org/img/wn/" + iconcode + ".png";

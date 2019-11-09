@@ -9,3 +9,4 @@ Five day imformation is pulled from a seperate five day API and is then displaye
 <img width="811" alt="Screen Shot 2019-11-09 at 1 24 57 PM" src="https://user-images.githubusercontent.com/31483933/68535278-b0d13d80-02f4-11ea-994a-1621cf676cb1.png">
 
 A search history is intended to populate beneath the search bar as well:
+<img width="458" alt="Screen Shot 2019-11-09 at 1 25 11 PM" src="https://user-images.githubusercontent.com/31483933/68535285-c2b2e080-02f4-11ea-9dcb-1b4eba4878b6.png">
